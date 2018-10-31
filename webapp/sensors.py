@@ -8,11 +8,11 @@ app = Flask(__name__)
 def temp():
   sense = SenseHat()
   sense.clear()
-  celcius = int(round(sense.get_temperature()))
-  humidity = int(round(sense.get_humidity()))
-  pressure = int(round(sense.get_pressure()))
+  celcius = round(sense.get_temperature())
+  humidity = round(sense.get_humidity())
+  pressure = round(sense.get_pressure())
 
-  climate = {'temp': str(celcius), 'humidity':humidity, 'pressure': pressure}
+  climate = {'temp': celcius, 'humidity':humidity, 'pressure': pressure}
   return render_template('temp.html', title='Current climate', climate=climate)
 
 @app.route("/hello")
