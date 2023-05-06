@@ -1,2 +1,2 @@
-Flask==1.0.2
-flask-cors==3.0.6
+Flask==UPDATERA1.0.2
+flask-cors==UPDATERA3.0.6
